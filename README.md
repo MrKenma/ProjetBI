@@ -32,3 +32,5 @@ Bon principe d'utilisation :
 - Tri des données lors de l'ajout dans le DW (pas de doublon)
 - Si problème détectée lors du transfert de données, marquer l'enregistrement comme anormal mais poursuivre le processus
 - Gérer les changements dans les faits comme dans les dimensions
+
+Lien rapport : https://docs.google.com/document/d/1IUs-YI48UZftwwN6V2Lsj78lazulhYivZTslbitwON0/edit?usp=sharing
