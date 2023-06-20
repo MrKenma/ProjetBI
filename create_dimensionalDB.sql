@@ -1,0 +1,7 @@
+USE master
+GO
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = N'BlablaCoSalesDB')
+CREATE DATABASE [BlablaCoSalesDB]
+GO
+ALTER DATABASE [BlablaCoSalesDB] SET QUERY_STORE=ON
+GO
