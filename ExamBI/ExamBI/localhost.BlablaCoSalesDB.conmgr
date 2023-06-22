@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.BlablaCoSalesDB"
+  DTS:DTSID="{D073DF14-E203-407A-94AD-DF921E38D411}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=BlablaCoSalesDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ExamBI-{D073DF14-E203-407A-94AD-DF921E38D411}localhost.BlablaCoSalesDB;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
