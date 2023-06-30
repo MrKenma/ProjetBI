@@ -1,0 +1,35 @@
+----- Transforms -----
+Aggregate : Applique des fonctions d'aggrégation (ex: average) aux valeurs des colonnes et copie les résultats dan la sortie de la transformation. Possible d'effectuer cette agrégation sur des GROUP BY.
+Audit : Permet d'ajouter des infos sur l'environnement (ex: ordi)
+Balanced data distributor : Permet de diviser la source de données pour les répartir vers plusieurs destinations
+Character map : Transformation de chaine de caractères
+Conditional split : Envoie des données vers plusieurs destinations en fonction du contenu de ces données
+Copy column : Ctrl+D sur des colonnes
+Data conversion : Conversion d'un type de données vers un autre type dans une nouvelle colonne
+Data mining query : Prédiction sur un modèle de minage de données
+DQS cleaning : corriger des données selon des règles
+Derived column : Créé des nouvelles colonnes en appliquant des expressions sur les données entrées
+Export column : Lit des données du flux et les écrit dans un fichier
+Fuzzy grouping : Effectue un nettoyage sur les données probablement dédoublées
+Fuzzy lookup : Nettoyage de données (appliquer un standard, corriger ou ajouter valeurs manquantes)
+Import column : Lit des données d'un fichier et les ajoute au flux de données
+Lookup : Joint des données entrées avec des données qui viennent d'une source de référence
+Merge : Combine deux dataset triés dans un dataset
+Merge join : Même chose que Merge mais en utilisant un FULL, LEFT our INNER join
+Multicast : Distribue les entrée dans une à plusieurs sorties (chaque entrée vers toutes les sorties)
+OLE DB command : Effectue une opération SQL sur chaque ligne du flux de données
+Percentage sampling : Crée un échantillon des données en sélectionnant un pourcentage des entrées.
+Pivot : Transforme des données normalisées en données moins normalisées mais plus compactes (moins de tables, plus de redondance)
+Row count : Compte le nombre de lignes qui passent dans le flux de données et enregistre le nombre final dans une variable
+Row sampling : Sélectionne un échantillon d'un certain nombre de lignes d'un set de données
+Script : Effectue des opérations customisées
+Slowly changing dimension : Gère l'ajout et la mise à jour de données dans un Data warehouse
+Sort : Trie les données entrées dans un ordre croissant ou décroissant sur base des infos d'une ou plusieurs colonnes
+Term extraction : Extraction de mots clés dans des textes (juste en anglais)
+Term lookup : Paire des mots clés venant des données entrées avec ceux d'une source de référence
+Union all : Combine plusieurs entrées en une seule sortie
+Unpivot : Permet de normaliser un set de données
+
+
+Lookup ok : pas de double nom d'entreprise dans la BD. 
+-> Gérer la mise à jour des infos (Country, City, altID)
