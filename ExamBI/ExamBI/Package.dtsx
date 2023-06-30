@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{D6399EC2-93F8-412B-BFA2-5B18D8AA08F6}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{B6D3BEBB-859F-450B-855B-84EC6B7DF50C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -777,8 +777,7 @@ FROM [Foodies997].[dbo].[Customers]</property>
                           refId="Package\Sequence Container\DimDate\Create date ID.Inputs[Derived Column Input].Columns[Date]"
                           cachedDataType="dbTimeStamp"
                           cachedName="Date"
-                          cachedSortKeyPosition="1"
-                          lineageId="Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[Date]" />
+                          lineageId="Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -804,7 +803,7 @@ FROM [Foodies997].[dbo].[Customers]</property>
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">[YEAR](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[Date]}) * 10000 + [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[Date]}) * 100 + [DAY](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[Date]})</property>
+                              name="Expression">[YEAR](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) * 10000 + [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) * 100 + [DAY](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]})</property>
                             <property
                               containsID="true"
                               dataType="System.String"
@@ -855,10 +854,10 @@ FROM [Foodies997].[dbo].[Customers]</property>
                       name="Derived Column Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Sequence Container\DimDate\Derived Column.Inputs[Derived Column Input].Columns[OrderDate]"
+                          refId="Package\Sequence Container\DimDate\Derived Column.Inputs[Derived Column Input].Columns[Date]"
                           cachedDataType="dbTimeStamp"
-                          cachedName="OrderDate"
-                          lineageId="Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]" />
+                          cachedName="Date"
+                          lineageId="Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -884,13 +883,13 @@ FROM [Foodies997].[dbo].[Customers]</property>
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">[YEAR](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]})</property>
+                              name="Expression">[YEAR](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]})</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">YEAR(OrderDate)</property>
+                              name="FriendlyExpression">YEAR(Date)</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -906,13 +905,13 @@ FROM [Foodies997].[dbo].[Customers]</property>
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">[MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]})</property>
+                              name="Expression">[MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]})</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">MONTH(OrderDate)</property>
+                              name="FriendlyExpression">MONTH(Date)</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -928,13 +927,13 @@ FROM [Foodies997].[dbo].[Customers]</property>
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">[DATEPART]("ww",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]})</property>
+                              name="Expression">[DATEPART]("ww",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]})</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">DATEPART("ww",OrderDate)</property>
+                              name="FriendlyExpression">DATEPART("ww",Date)</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -950,13 +949,13 @@ FROM [Foodies997].[dbo].[Customers]</property>
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">[DAY](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]})</property>
+                              name="Expression">[DAY](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]})</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">DAY(OrderDate)</property>
+                              name="FriendlyExpression">DAY(Date)</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -973,13 +972,13 @@ FROM [Foodies997].[dbo].[Customers]</property>
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">[MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 1 ? "January" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 2 ? "February" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 3 ? "March" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 4 ? "April" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 5 ? "May" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 6 ? "June" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 7 ? "July" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 8 ? "August" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 9 ? "September" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 10 ? "October" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 11 ? "November" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 12 ? "December" : "error"</property>
+                              name="Expression">[MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 1 ? "January" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 2 ? "February" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 3 ? "March" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 4 ? "April" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 5 ? "May" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 6 ? "June" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 7 ? "July" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 8 ? "August" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 9 ? "September" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 10 ? "October" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 11 ? "November" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 12 ? "December" : "error"</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">MONTH(OrderDate) == 1 ? "January" : MONTH(OrderDate) == 2 ? "February" : MONTH(OrderDate) == 3 ? "March" : MONTH(OrderDate) == 4 ? "April" : MONTH(OrderDate) == 5 ? "May" : MONTH(OrderDate) == 6 ? "June" : MONTH(OrderDate) == 7 ? "July" : MONTH(OrderDate) == 8 ? "August" : MONTH(OrderDate) == 9 ? "September" : MONTH(OrderDate) == 10 ? "October" : MONTH(OrderDate) == 11 ? "November" : MONTH(OrderDate) == 12 ? "December" : "error"</property>
+                              name="FriendlyExpression">MONTH(Date) == 1 ? "January" : MONTH(Date) == 2 ? "February" : MONTH(Date) == 3 ? "March" : MONTH(Date) == 4 ? "April" : MONTH(Date) == 5 ? "May" : MONTH(Date) == 6 ? "June" : MONTH(Date) == 7 ? "July" : MONTH(Date) == 8 ? "August" : MONTH(Date) == 9 ? "September" : MONTH(Date) == 10 ? "October" : MONTH(Date) == 11 ? "November" : MONTH(Date) == 12 ? "December" : "error"</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -996,13 +995,13 @@ FROM [Foodies997].[dbo].[Customers]</property>
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">[MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 1 ? "Janvier" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 2 ? "Fevrier" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 3 ? "Mars" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 4 ? "Avril" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 5 ? "Mai" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 6 ? "Juin" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 7 ? "Juillet" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 8 ? "Aout" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 9 ? "Septembre" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 10 ? "Octobre" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 11 ? "Novembre" : [MONTH](#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 12 ? "Decembre" : "erreur"</property>
+                              name="Expression">[MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 1 ? "Janvier" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 2 ? "Fevrier" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 3 ? "Mars" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 4 ? "Avril" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 5 ? "Mai" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 6 ? "Juin" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 7 ? "Juillet" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 8 ? "Aout" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 9 ? "Septembre" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 10 ? "Octobre" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 11 ? "Novembre" : [MONTH](#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 12 ? "Decembre" : "erreur"</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">MONTH(OrderDate) == 1 ? "Janvier" : MONTH(OrderDate) == 2 ? "Fevrier" : MONTH(OrderDate) == 3 ? "Mars" : MONTH(OrderDate) == 4 ? "Avril" : MONTH(OrderDate) == 5 ? "Mai" : MONTH(OrderDate) == 6 ? "Juin" : MONTH(OrderDate) == 7 ? "Juillet" : MONTH(OrderDate) == 8 ? "Aout" : MONTH(OrderDate) == 9 ? "Septembre" : MONTH(OrderDate) == 10 ? "Octobre" : MONTH(OrderDate) == 11 ? "Novembre" : MONTH(OrderDate) == 12 ? "Decembre" : "erreur"</property>
+                              name="FriendlyExpression">MONTH(Date) == 1 ? "Janvier" : MONTH(Date) == 2 ? "Fevrier" : MONTH(Date) == 3 ? "Mars" : MONTH(Date) == 4 ? "Avril" : MONTH(Date) == 5 ? "Mai" : MONTH(Date) == 6 ? "Juin" : MONTH(Date) == 7 ? "Juillet" : MONTH(Date) == 8 ? "Aout" : MONTH(Date) == 9 ? "Septembre" : MONTH(Date) == 10 ? "Octobre" : MONTH(Date) == 11 ? "Novembre" : MONTH(Date) == 12 ? "Decembre" : "erreur"</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -1019,13 +1018,13 @@ FROM [Foodies997].[dbo].[Customers]</property>
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">[DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 1 ? "Monday" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 2 ? "Tuesday" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 3 ? "Wednesday" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 4 ? "Thursday" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 5 ? "Friday" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 6 ? "Saturday" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 7 ? "Sunday" : "error"</property>
+                              name="Expression">[DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 1 ? "Monday" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 2 ? "Tuesday" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 3 ? "Wednesday" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 4 ? "Thursday" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 5 ? "Friday" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 6 ? "Saturday" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 7 ? "Sunday" : "error"</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">DATEPART("DW",OrderDate) == 1 ? "Monday" : DATEPART("DW",OrderDate) == 2 ? "Tuesday" : DATEPART("DW",OrderDate) == 3 ? "Wednesday" : DATEPART("DW",OrderDate) == 4 ? "Thursday" : DATEPART("DW",OrderDate) == 5 ? "Friday" : DATEPART("DW",OrderDate) == 6 ? "Saturday" : DATEPART("DW",OrderDate) == 7 ? "Sunday" : "error"</property>
+                              name="FriendlyExpression">DATEPART("DW",Date) == 1 ? "Monday" : DATEPART("DW",Date) == 2 ? "Tuesday" : DATEPART("DW",Date) == 3 ? "Wednesday" : DATEPART("DW",Date) == 4 ? "Thursday" : DATEPART("DW",Date) == 5 ? "Friday" : DATEPART("DW",Date) == 6 ? "Saturday" : DATEPART("DW",Date) == 7 ? "Sunday" : "error"</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
@@ -1042,13 +1041,13 @@ FROM [Foodies997].[dbo].[Customers]</property>
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">[DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 1 ? "Lundi" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 2 ? "Mardi" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 3 ? "Mercredi" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 4 ? "Jeudi" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 5 ? "Vendredi" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 6 ? "Samedi" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]}) == 7 ? "Dimanche" : "erreur"</property>
+                              name="Expression">[DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 1 ? "Lundi" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 2 ? "Mardi" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 3 ? "Mercredi" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 4 ? "Jeudi" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 5 ? "Vendredi" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 6 ? "Samedi" : [DATEPART]("DW",#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}) == 7 ? "Dimanche" : "erreur"</property>
                             <property
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
-                              name="FriendlyExpression">DATEPART("DW",OrderDate) == 1 ? "Lundi" : DATEPART("DW",OrderDate) == 2 ? "Mardi" : DATEPART("DW",OrderDate) == 3 ? "Mercredi" : DATEPART("DW",OrderDate) == 4 ? "Jeudi" : DATEPART("DW",OrderDate) == 5 ? "Vendredi" : DATEPART("DW",OrderDate) == 6 ? "Samedi" : DATEPART("DW",OrderDate) == 7 ? "Dimanche" : "erreur"</property>
+                              name="FriendlyExpression">DATEPART("DW",Date) == 1 ? "Lundi" : DATEPART("DW",Date) == 2 ? "Mardi" : DATEPART("DW",Date) == 3 ? "Mercredi" : DATEPART("DW",Date) == 4 ? "Jeudi" : DATEPART("DW",Date) == 5 ? "Vendredi" : DATEPART("DW",Date) == 6 ? "Samedi" : DATEPART("DW",Date) == 7 ? "Dimanche" : "erreur"</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -1074,133 +1073,6 @@ FROM [Foodies997].[dbo].[Customers]</property>
                           lineageId="Package\Sequence Container\DimDate\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Sequence Container\DimDate\Filtration des doubles"
-                  componentClassID="Microsoft.Sort"
-                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-                  name="Filtration des doubles"
-                  version="1">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                      name="EliminateDuplicates">true</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the maximum number of threads to use for sorting."
-                      expressionType="Notify"
-                      name="MaximumThreads">-1</property>
-                  </properties>
-                  <inputs>
-                    <input
-                      refId="Package\Sequence Container\DimDate\Filtration des doubles.Inputs[Sort Input]"
-                      name="Sort Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Sequence Container\DimDate\Filtration des doubles.Inputs[Sort Input].Columns[OrderDate]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="OrderDate"
-                          cachedSortKeyPosition="1"
-                          lineageId="Package\Sequence Container\DimDate\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]">
-                          <properties>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the comparison options for character data."
-                              name="NewComparisonFlags">0</property>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">0</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\DimDate\Filtration des doubles.Inputs[Sort Input].Columns[ShippedDate]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="ShippedDate"
-                          lineageId="Package\Sequence Container\DimDate\Merge Join.Outputs[Merge Join Output].Columns[ShippedDate]">
-                          <properties>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the comparison options for character data."
-                              name="NewComparisonFlags">0</property>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">0</property>
-                          </properties>
-                        </inputColumn>
-                        <inputColumn
-                          refId="Package\Sequence Container\DimDate\Filtration des doubles.Inputs[Sort Input].Columns[Date]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="Date"
-                          lineageId="Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]">
-                          <properties>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the comparison options for character data."
-                              name="NewComparisonFlags">0</property>
-                            <property
-                              dataType="System.Int32"
-                              description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">1</property>
-                          </properties>
-                        </inputColumn>
-                      </inputColumns>
-                      <externalMetadataColumns />
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output]"
-                      isSorted="true"
-                      name="Sort Output">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[OrderDate]"
-                          name="OrderDate">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Sequence Container\DimDate\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]}</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[ShippedDate]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[ShippedDate]"
-                          name="ShippedDate">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Sequence Container\DimDate\Merge Join.Outputs[Merge Join Output].Columns[ShippedDate]}</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[Date]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output].Columns[Date]"
-                          name="Date"
-                          sortKeyPosition="1">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the lineage identifier of the input column that is associated with this output column."
-                              name="SortColumnId">#{Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output].Columns[Date]}</property>
-                          </properties>
-                        </outputColumn>
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -1384,7 +1256,7 @@ where [refTable].[dateID] = ?</property>
                           cachedDataType="dbTimeStamp"
                           cachedName="OrderDate"
                           cachedSortKeyPosition="1"
-                          lineageId="Package\Sequence Container\DimDate\Sort.Outputs[Sort Output].Columns[OrderDate]" />
+                          lineageId="Package\Sequence Container\DimDate\Sort + filter.Outputs[Sort Output].Columns[OrderDate]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -1398,7 +1270,7 @@ where [refTable].[dateID] = ?</property>
                           cachedDataType="dbTimeStamp"
                           cachedName="ShippedDate"
                           cachedSortKeyPosition="1"
-                          lineageId="Package\Sequence Container\DimDate\Sort 1.Outputs[Sort Output].Columns[ShippedDate]" />
+                          lineageId="Package\Sequence Container\DimDate\Sort + filter 1.Outputs[Sort Output].Columns[ShippedDate]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -1876,11 +1748,6 @@ where [refTable].[dateID] = ?</property>
                       name="OLE DB Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Sequence Container\DimDate\OrderDate.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
-                          dataType="dbTimeStamp"
-                          lineageId="Package\Sequence Container\DimDate\OrderDate.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
-                          name="OrderDate" />
-                        <outputColumn
                           refId="Package\Sequence Container\DimDate\OrderDate.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
                           lineageId="Package\Sequence Container\DimDate\OrderDate.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
@@ -1892,6 +1759,11 @@ where [refTable].[dateID] = ?</property>
                           lineageId="Package\Sequence Container\DimDate\OrderDate.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
+                        <outputColumn
+                          refId="Package\Sequence Container\DimDate\OrderDate.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Sequence Container\DimDate\OrderDate.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
+                          name="OrderDate" />
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
@@ -2067,17 +1939,17 @@ where [refTable].[dateID] = ?</property>
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Sequence Container\DimDate\Sort"
+                  refId="Package\Sequence Container\DimDate\Sort + filter"
                   componentClassID="Microsoft.Sort"
                   contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-                  name="Sort"
+                  name="Sort + filter"
                   version="1">
                   <properties>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                      name="EliminateDuplicates">false</property>
+                      name="EliminateDuplicates">true</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the maximum number of threads to use for sorting."
@@ -2086,11 +1958,11 @@ where [refTable].[dateID] = ?</property>
                   </properties>
                   <inputs>
                     <input
-                      refId="Package\Sequence Container\DimDate\Sort.Inputs[Sort Input]"
+                      refId="Package\Sequence Container\DimDate\Sort + filter.Inputs[Sort Input]"
                       name="Sort Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Sequence Container\DimDate\Sort.Inputs[Sort Input].Columns[OrderDate]"
+                          refId="Package\Sequence Container\DimDate\Sort + filter.Inputs[Sort Input].Columns[OrderDate]"
                           cachedDataType="dbTimeStamp"
                           cachedName="OrderDate"
                           lineageId="Package\Sequence Container\DimDate\OrderDate.Outputs[OLE DB Source Output].Columns[OrderDate]">
@@ -2111,14 +1983,14 @@ where [refTable].[dateID] = ?</property>
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Sequence Container\DimDate\Sort.Outputs[Sort Output]"
+                      refId="Package\Sequence Container\DimDate\Sort + filter.Outputs[Sort Output]"
                       isSorted="true"
                       name="Sort Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Sequence Container\DimDate\Sort.Outputs[Sort Output].Columns[OrderDate]"
+                          refId="Package\Sequence Container\DimDate\Sort + filter.Outputs[Sort Output].Columns[OrderDate]"
                           dataType="dbTimeStamp"
-                          lineageId="Package\Sequence Container\DimDate\Sort.Outputs[Sort Output].Columns[OrderDate]"
+                          lineageId="Package\Sequence Container\DimDate\Sort + filter.Outputs[Sort Output].Columns[OrderDate]"
                           name="OrderDate"
                           sortKeyPosition="1">
                           <properties>
@@ -2135,17 +2007,17 @@ where [refTable].[dateID] = ?</property>
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Sequence Container\DimDate\Sort 1"
+                  refId="Package\Sequence Container\DimDate\Sort + filter 1"
                   componentClassID="Microsoft.Sort"
                   contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-                  name="Sort 1"
+                  name="Sort + filter 1"
                   version="1">
                   <properties>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                      name="EliminateDuplicates">false</property>
+                      name="EliminateDuplicates">true</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the maximum number of threads to use for sorting."
@@ -2154,11 +2026,11 @@ where [refTable].[dateID] = ?</property>
                   </properties>
                   <inputs>
                     <input
-                      refId="Package\Sequence Container\DimDate\Sort 1.Inputs[Sort Input]"
+                      refId="Package\Sequence Container\DimDate\Sort + filter 1.Inputs[Sort Input]"
                       name="Sort Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Sequence Container\DimDate\Sort 1.Inputs[Sort Input].Columns[ShippedDate]"
+                          refId="Package\Sequence Container\DimDate\Sort + filter 1.Inputs[Sort Input].Columns[ShippedDate]"
                           cachedDataType="dbTimeStamp"
                           cachedName="ShippedDate"
                           lineageId="Package\Sequence Container\DimDate\ShippedDate.Outputs[OLE DB Source Output].Columns[ShippedDate]">
@@ -2179,14 +2051,14 @@ where [refTable].[dateID] = ?</property>
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Sequence Container\DimDate\Sort 1.Outputs[Sort Output]"
+                      refId="Package\Sequence Container\DimDate\Sort + filter 1.Outputs[Sort Output]"
                       isSorted="true"
                       name="Sort Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Sequence Container\DimDate\Sort 1.Outputs[Sort Output].Columns[ShippedDate]"
+                          refId="Package\Sequence Container\DimDate\Sort + filter 1.Outputs[Sort Output].Columns[ShippedDate]"
                           dataType="dbTimeStamp"
-                          lineageId="Package\Sequence Container\DimDate\Sort 1.Outputs[Sort Output].Columns[ShippedDate]"
+                          lineageId="Package\Sequence Container\DimDate\Sort + filter 1.Outputs[Sort Output].Columns[ShippedDate]"
                           name="ShippedDate"
                           sortKeyPosition="1">
                           <properties>
@@ -2206,12 +2078,12 @@ where [refTable].[dateID] = ?</property>
               <paths>
                 <path
                   refId="Package\Sequence Container\DimDate.Paths[Clear null entries]"
-                  endId="Package\Sequence Container\DimDate\Sort.Inputs[Sort Input]"
+                  endId="Package\Sequence Container\DimDate\Sort + filter.Inputs[Sort Input]"
                   name="Clear null entries"
                   startId="Package\Sequence Container\DimDate\Conditional Split.Outputs[Clear null entries]" />
                 <path
                   refId="Package\Sequence Container\DimDate.Paths[Clear null entries1]"
-                  endId="Package\Sequence Container\DimDate\Sort 1.Inputs[Sort Input]"
+                  endId="Package\Sequence Container\DimDate\Sort + filter 1.Inputs[Sort Input]"
                   name="Clear null entries"
                   startId="Package\Sequence Container\DimDate\Conditional Split 1.Outputs[Clear null entries]" />
                 <path
@@ -2226,7 +2098,7 @@ where [refTable].[dateID] = ?</property>
                   startId="Package\Sequence Container\DimDate\Derived Column.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Sequence Container\DimDate.Paths[Derived Column Output2]"
-                  endId="Package\Sequence Container\DimDate\Filtration des doubles.Inputs[Sort Input]"
+                  endId="Package\Sequence Container\DimDate\Create date ID.Inputs[Derived Column Input]"
                   name="Derived Column Output"
                   startId="Package\Sequence Container\DimDate\One date column.Outputs[Derived Column Output]" />
                 <path
@@ -2253,17 +2125,12 @@ where [refTable].[dateID] = ?</property>
                   refId="Package\Sequence Container\DimDate.Paths[Sort Output]"
                   endId="Package\Sequence Container\DimDate\Merge Join.Inputs[Merge Join Left Input]"
                   name="Sort Output"
-                  startId="Package\Sequence Container\DimDate\Sort.Outputs[Sort Output]" />
+                  startId="Package\Sequence Container\DimDate\Sort + filter.Outputs[Sort Output]" />
                 <path
                   refId="Package\Sequence Container\DimDate.Paths[Sort Output1]"
                   endId="Package\Sequence Container\DimDate\Merge Join.Inputs[Merge Join Right Input]"
                   name="Sort Output"
-                  startId="Package\Sequence Container\DimDate\Sort 1.Outputs[Sort Output]" />
-                <path
-                  refId="Package\Sequence Container\DimDate.Paths[Sort Output2]"
-                  endId="Package\Sequence Container\DimDate\Create date ID.Inputs[Derived Column Input]"
-                  name="Sort Output"
-                  startId="Package\Sequence Container\DimDate\Filtration des doubles.Outputs[Sort Output]" />
+                  startId="Package\Sequence Container\DimDate\Sort + filter 1.Outputs[Sort Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -4371,52 +4238,50 @@ where [refTable].[companyName] = ?</property>
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\Sequence Container\DimCustomer\Lookup"
-          TopLeft="507.142865779449,163.647061118618" />
+          TopLeft="507.142865779449,172.647061118618" />
         <EdgeLayout
           Id="Package\Sequence Container\DimCustomer.Paths[OLE DB Source Output]"
-          TopLeft="564.8857227885,103.54117733929">
+          TopLeft="564.885722788499,103.54117733929">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.1058837793279"
+              EndConnector="0,69.1058837793281"
               Start="0,0"
-              End="0,52.6058837793279">
+              End="0,61.6058837793281">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.6058837793279" />
+                    End="0,61.6058837793281" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimCustomer.Paths[Lookup No Match Output]"
-          TopLeft="565.08572270335,205.247061118618">
+          TopLeft="565.08572270335,214.247061118618">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,95.2823548608997"
+              EndConnector="0,86.282354860899"
               Start="0,0"
-              End="0,87.7823548608997">
+              End="0,78.782354860899">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,87.7823548608997" />
+                    End="0,78.782354860899" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,38.0864899304498,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,33.5864899304495,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4455,7 +4320,7 @@ where [refTable].[companyName] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4465,7 +4330,7 @@ where [refTable].[companyName] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4480,15 +4345,11 @@ where [refTable].[companyName] = ?</property>
         <NodeLayout
           Size="152.8,41.6"
           Id="Package\Sequence Container\DimDate\Derived Column"
-          TopLeft="721.666666666667,642.666666666666" />
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\Sequence Container\DimDate\Filtration des doubles"
-          TopLeft="709.166666666667,420.666666666667" />
+          TopLeft="720.833333333334,578.499999999999" />
         <NodeLayout
           Size="148,41.6"
           Id="Package\Sequence Container\DimDate\Create date ID"
-          TopLeft="725,488.5" />
+          TopLeft="724.166666666667,424.333333333333" />
         <NodeLayout
           Size="127.2,41.6"
           Id="Package\Sequence Container\DimDate\OrderDate"
@@ -4496,19 +4357,19 @@ where [refTable].[companyName] = ?</property>
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\Sequence Container\DimDate\Lookup"
-          TopLeft="741.666666666667,556.833333333333" />
+          TopLeft="740.833333333334,492.666666666666" />
         <NodeLayout
           Size="163.2,41.6"
           Id="Package\Sequence Container\DimDate\Conditional Split 1"
-          TopLeft="860.833333333333,114.666666666667" />
+          TopLeft="865.833333333333,114.666666666667" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Sequence Container\DimDate\OLE DB Destination"
-          TopLeft="713.333333333334,715.166666666666" />
+          TopLeft="712.500000000001,650.999999999999" />
         <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Sequence Container\DimDate\Sort"
-          TopLeft="608.333333333333,195.5" />
+          Size="133.6,41.6"
+          Id="Package\Sequence Container\DimDate\Sort + filter"
+          TopLeft="596.666666666666,197.166666666667" />
         <NodeLayout
           Size="159.2,41.6"
           Id="Package\Sequence Container\DimDate\One date column"
@@ -4522,40 +4383,16 @@ where [refTable].[companyName] = ?</property>
           Id="Package\Sequence Container\DimDate\ShippedDate"
           TopLeft="875,43" />
         <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Sequence Container\DimDate\Sort 1"
-          TopLeft="891.666666666667,193" />
+          Size="142.4,41.6"
+          Id="Package\Sequence Container\DimDate\Sort + filter 1"
+          TopLeft="878.333333333334,193" />
         <NodeLayout
           Size="154.4,41.6"
           Id="Package\Sequence Container\DimDate\Conditional Split"
           TopLeft="585.833333333333,120" />
         <EdgeLayout
-          Id="Package\Sequence Container\DimDate.Paths[Derived Column Output2]"
-          TopLeft="799.6,392.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28.0666666666666"
-              Start="0,0"
-              End="0,20.5666666666666">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5666666666666" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Sequence Container\DimDate.Paths[Derived Column Output1]"
-          TopLeft="798.3,684.266666666666">
+          TopLeft="797.466666666667,620.099999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4572,14 +4409,12 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimDate.Paths[Derived Column Output]"
-          TopLeft="798.533333333334,530.1">
+          TopLeft="797.700000000001,465.933333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4596,177 +4431,145 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimDate.Paths[Clear null entries1]"
-          TopLeft="943.65,156.266666666667">
+          TopLeft="948.483333333333,156.266666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.7333333333333"
+              EndConnector="0,36.733333333333"
               Start="0,0"
-              End="0,29.2333333333333">
+              End="0,29.233333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.2333333333333" />
+                    End="0,29.233333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-37.84509765625,9.74215494791663,75.6901953125,9.7490234375"
+              BoundingBox="-37.84509765625,9.74215494791649,75.6901953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimDate.Paths[Clear null entries]"
-          TopLeft="660.083333333333,161.6">
+          TopLeft="663.25,161.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.8999999999999"
+              EndConnector="0,35.5666666666667"
               Start="0,0"
-              End="0,26.3999999999999">
+              End="0,28.0666666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.3999999999999" />
+                    End="0,28.0666666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-37.84509765625,8.32548828124996,75.6901953125,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\DimDate.Paths[Sort Output2]"
-          TopLeft="798.883333333333,462.266666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26.2333333333333"
-              Start="0,0"
-              End="0,18.7333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.7333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-37.84509765625,9.15882161458333,75.6901953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimDate.Paths[Sort Output1]"
-          TopLeft="944.866666666667,234.6">
+          TopLeft="949.533333333334,234.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-124.8,50.0666666666668"
+              EndConnector="-129.466666666667,50.066666666667"
               Start="0,0"
-              End="-124.8,42.5666666666668">
+              End="-129.466666666667,42.566666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.6736585365854" />
+                    End="0,25.6736585365856" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.6736585365854"
-                    Point2="0,29.6736585365854"
-                    Point3="-4,29.6736585365854" />
+                    Point1="0,25.6736585365856"
+                    Point2="0,29.6736585365856"
+                    Point3="-4,29.6736585365856" />
                   <mssgle:LineSegment
-                    End="-120.8,29.6736585365854" />
+                    End="-125.466666666667,29.6736585365856" />
                   <mssgle:CubicBezierSegment
-                    Point1="-120.8,29.6736585365854"
-                    Point2="-124.8,29.6736585365854"
-                    Point3="-124.8,33.6736585365854" />
+                    Point1="-125.466666666667,29.6736585365856"
+                    Point2="-129.466666666667,29.6736585365856"
+                    Point3="-129.466666666667,33.6736585365856" />
                   <mssgle:LineSegment
-                    End="-124.8,42.5666666666668" />
+                    End="-129.466666666667,42.566666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimDate.Paths[Sort Output]"
-          TopLeft="657.133333333333,237.1">
+          TopLeft="663.466666666666,238.766666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="122.4,47.5666666666667"
+              EndConnector="116.066666666667,45.9000000000003"
               Start="0,0"
-              End="122.4,40.0666666666667">
+              End="116.066666666667,38.4000000000003">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.1919512195122" />
+                    End="0,23.2041463414636" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.1919512195122"
-                    Point2="0,28.1919512195122"
-                    Point3="4,28.1919512195122" />
+                    Point1="0,23.2041463414636"
+                    Point2="0,27.2041463414636"
+                    Point3="4,27.2041463414636" />
                   <mssgle:LineSegment
-                    End="118.4,28.1919512195122" />
+                    End="112.066666666667,27.2041463414636" />
                   <mssgle:CubicBezierSegment
-                    Point1="118.4,28.1919512195122"
-                    Point2="122.4,28.1919512195122"
-                    Point3="122.4,32.1919512195122" />
+                    Point1="112.066666666667,27.2041463414636"
+                    Point2="116.066666666667,27.2041463414636"
+                    Point3="116.066666666667,31.2041463414636" />
                   <mssgle:LineSegment
-                    End="122.4,40.0666666666667" />
+                    End="116.066666666667,38.4000000000003" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimDate.Paths[OLE DB Source Output1]"
-          TopLeft="943.316666666667,84.6">
+          TopLeft="945.816666666667,84.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,30.0666666666667"
+              EndConnector="0,30.066666666667"
               Start="0,0"
-              End="0,22.5666666666667">
+              End="0,22.566666666667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.5666666666667" />
+                    End="0,22.566666666667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4788,9 +4591,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4812,14 +4613,12 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimDate.Paths[Lookup No Match Output]"
-          TopLeft="798.066666666667,598.433333333333">
+          TopLeft="797.233333333334,534.266666666666">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4839,6 +4638,28 @@ where [refTable].[companyName] = ?</property>
             <mssgm:EdgeLabel
               BoundingBox="-55.80638671875,12.5619791666666,111.6127734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\DimDate.Paths[Derived Column Output2]"
+          TopLeft="799.3,392.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.7333333333333"
+              Start="0,0"
+              End="0,24.2333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.2333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4914,7 +4735,7 @@ where [refTable].[companyName] = ?</property>
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\Sequence Container\DimEmployee\Lookup"
-          TopLeft="684,203" />
+          TopLeft="682,211" />
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\Sequence Container\DimEmployee\OLE DB Source"
@@ -4925,49 +4746,47 @@ where [refTable].[companyName] = ?</property>
           TopLeft="659,368" />
         <EdgeLayout
           Id="Package\Sequence Container\DimEmployee.Paths[OLE DB Source Output]"
-          TopLeft="742.1,114.6">
+          TopLeft="741.1,114.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,88.4"
+              EndConnector="0,96.4"
               Start="0,0"
-              End="0,80.9">
+              End="0,88.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80.9" />
+                    End="0,88.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimEmployee.Paths[Lookup No Match Output]"
-          TopLeft="742.3,244.6">
+          TopLeft="741.3,252.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,123.4"
+              EndConnector="0,115.4"
               Start="0,0"
-              End="0,115.9">
+              End="0,107.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,115.9" />
+                    End="0,107.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,52.1453125,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,48.1453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5079,9 +4898,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5103,9 +4920,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5127,9 +4942,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5151,9 +4964,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5175,9 +4986,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5223,9 +5032,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

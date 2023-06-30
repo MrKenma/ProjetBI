@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{D6399EC2-93F8-412B-BFA2-5B18D8AA08F6}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{F8BB10DD-AF33-4D94-A103-6490526090DB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2077,7 +2077,7 @@ where [refTable].[dateID] = ?</property>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                      name="EliminateDuplicates">false</property>
+                      name="EliminateDuplicates">true</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the maximum number of threads to use for sorting."
@@ -2145,7 +2145,7 @@ where [refTable].[dateID] = ?</property>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                      name="EliminateDuplicates">false</property>
+                      name="EliminateDuplicates">true</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the maximum number of threads to use for sorting."
@@ -4371,52 +4371,50 @@ where [refTable].[companyName] = ?</property>
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\Sequence Container\DimCustomer\Lookup"
-          TopLeft="507.142865779449,163.647061118618" />
+          TopLeft="507.142865779449,172.647061118618" />
         <EdgeLayout
           Id="Package\Sequence Container\DimCustomer.Paths[OLE DB Source Output]"
-          TopLeft="564.8857227885,103.54117733929">
+          TopLeft="564.885722788499,103.54117733929">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.1058837793279"
+              EndConnector="0,69.1058837793281"
               Start="0,0"
-              End="0,52.6058837793279">
+              End="0,61.6058837793281">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.6058837793279" />
+                    End="0,61.6058837793281" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimCustomer.Paths[Lookup No Match Output]"
-          TopLeft="565.08572270335,205.247061118618">
+          TopLeft="565.08572270335,214.247061118618">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,95.2823548608997"
+              EndConnector="0,86.282354860899"
               Start="0,0"
-              End="0,87.7823548608997">
+              End="0,78.782354860899">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,87.7823548608997" />
+                    End="0,78.782354860899" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,38.0864899304498,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,33.5864899304495,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4455,7 +4453,7 @@ where [refTable].[companyName] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4465,7 +4463,7 @@ where [refTable].[companyName] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4548,9 +4546,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4572,9 +4568,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4596,9 +4590,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4621,7 +4613,7 @@ where [refTable].[companyName] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-37.84509765625,9.74215494791663,75.6901953125,9.7490234375"
+              BoundingBox="-37.84509765625,9.74215494791665,75.6901953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4645,7 +4637,7 @@ where [refTable].[companyName] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-37.84509765625,8.32548828124996,75.6901953125,9.7490234375"
+              BoundingBox="-37.84509765625,8.32548828124995,75.6901953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4668,9 +4660,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4704,9 +4694,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4740,9 +4728,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4764,9 +4750,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4788,9 +4772,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4812,9 +4794,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4914,7 +4894,7 @@ where [refTable].[companyName] = ?</property>
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\Sequence Container\DimEmployee\Lookup"
-          TopLeft="684,203" />
+          TopLeft="682,211" />
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\Sequence Container\DimEmployee\OLE DB Source"
@@ -4925,49 +4905,47 @@ where [refTable].[companyName] = ?</property>
           TopLeft="659,368" />
         <EdgeLayout
           Id="Package\Sequence Container\DimEmployee.Paths[OLE DB Source Output]"
-          TopLeft="742.1,114.6">
+          TopLeft="741.1,114.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,88.4"
+              EndConnector="0,96.4"
               Start="0,0"
-              End="0,80.9">
+              End="0,88.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80.9" />
+                    End="0,88.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimEmployee.Paths[Lookup No Match Output]"
-          TopLeft="742.3,244.6">
+          TopLeft="741.3,252.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,123.4"
+              EndConnector="0,115.4"
               Start="0,0"
-              End="0,115.9">
+              End="0,107.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,115.9" />
+                    End="0,107.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,52.1453125,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,48.1453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5079,9 +5057,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5103,9 +5079,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5127,9 +5101,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5151,9 +5123,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5175,9 +5145,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5223,9 +5191,7 @@ where [refTable].[companyName] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
