@@ -33,8 +33,8 @@ GO
 CREATE TABLE [DimProduct] (
 	[ProductID] INT PRIMARY KEY IDENTITY (1, 1),
 	[ProductAltID] INT NOT NULL,
-	[ProductName] NVARCHAR(40) NOT NULL,
-	[CategoryFrenchName] NVARCHAR(20) NOT NULL,
+	[ProductName] NVARCHAR(50) NOT NULL,
+	[CategoryFrenchName] NVARCHAR(50) NOT NULL,
 	[CategoryEnglishName] NVARCHAR(20) NOT NULL,
 )
 GO
@@ -66,17 +66,19 @@ CREATE TABLE [DimShipper] (
 GO
 
 CREATE TABLE [dbo].[FactOrderDetails] (
-	[OrderID] INT NOT NULL,
-	[ProductID] INT FOREIGN KEY REFERENCES dimProduct(productID) NOT NULL,
-	[CustomerID] INT FOREIGN KEY REFERENCES dimCustomer(customerID) NOT NULL,
-	[EmployeeID] INT FOREIGN KEY REFERENCES dimEmployee(employeeID) NOT NULL,
-	[ShipperID] INT FOREIGN KEY REFERENCES dimShipper(shipperID) NOT NULL,
-	[ShippedDate] INT FOREIGN KEY REFERENCES dimDate(dateID) NOT NULL,
-	[OrderDate] INT FOREIGN KEY REFERENCES dimDate(dateID) NOT NULL,
+	[OrderIDKEY] INT NOT NULL,
+	[ProductIDKEY] INT NOT NULL,
+	[DBName] NCHAR(15) NOT NULL,
+	[ProductID] INT FOREIGN KEY REFERENCES dimProduct(productID),
+	[CustomerID] INT FOREIGN KEY REFERENCES dimCustomer(customerID),
+	[EmployeeID] INT FOREIGN KEY REFERENCES dimEmployee(employeeID),
+	[ShipperID] INT FOREIGN KEY REFERENCES dimShipper(shipperID),
+	[ShippedDateID] INT FOREIGN KEY REFERENCES dimDate(dateID),
+	[OrderDateID] INT FOREIGN KEY REFERENCES dimDate(dateID),
 	[UnitPrice] MONEY NOT NULL,
 	[Quantity] SMALLINT NOT NULL,
 	[Discount] REAL NOT NULL,
 	[IsOnline] BIT NOT NULL,
-	CONSTRAINT PK_OrderDetails PRIMARY KEY (OrderID, ProductID)
+	CONSTRAINT PK_OrderDetails PRIMARY KEY (OrderIDKEY, ProductIDKEY, DBName)
 )
 GO
