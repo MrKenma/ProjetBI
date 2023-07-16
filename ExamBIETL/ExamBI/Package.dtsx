@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="66"
-  DTS:VersionGUID="{2A153C7E-F5DA-44D7-B782-0BBB692DD40C}">
+  DTS:VersionBuild="69"
+  DTS:VersionGUID="{D3F1062B-9C85-4DA5-8501-77D1F278A1BF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -47,6 +47,151 @@
               DTS:TextQualified="True"
               DTS:ObjectName="CompanyName"
               DTS:DTSID="{636A1F82-9558-43D5-BA11-D49B59DC4D67}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{20BD547F-0FB9-4416-93A1-26C067A01A08}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\jujul\Informatique_de_gestion\3e_annee\Business Intelligence and Data Analytics\BI\ProjetBI\ExamBIETL\ErrorsDimCustomer.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{84E1E078-58A5-48B4-9914-FD02A06CF059}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CompanyName"
+              DTS:DTSID="{5F57FFD8-39C9-4402-859F-130E556B3DF9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{6E185288-0C72-4B0C-90B9-CF206FD2780B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{CA61568A-29B4-4A51-9296-EA0465BDAB4A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CCFA3D34-54C5-441E-8A88-39ACADB41EB0}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\jujul\Informatique_de_gestion\3e_annee\Business Intelligence and Data Analytics\BI\ProjetBI\ExamBIETL\ErrorsDimEmployee.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EmployeeID"
+              DTS:DTSID="{5FCC12FC-648F-4D8A-A9BC-7F073B16638E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{D54F382A-49C1-4B19-893C-1A68E00B741D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{70B4561E-1FB1-45B1-9F8A-00ED5A91CB40}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8E77E162-5774-468D-91F9-01CC5C320732}"
+      DTS:ObjectName="Flat File Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\jujul\Informatique_de_gestion\3e_annee\Business Intelligence and Data Analytics\BI\ProjetBI\ExamBIETL\ErrorsDimProduct.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{42F05ABD-8C3D-4B27-A315-68810B56A9E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductName"
+              DTS:DTSID="{F6727475-2DA0-4B2A-A418-126D220CAF3D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CategoryName"
+              DTS:DTSID="{1B445ADF-A6C9-4400-93B1-024676A2510A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -841,7 +986,7 @@ where [refTable].[ProductAltID] = ?</property>
                       errorOrTruncationOperation="Copy Column"
                       lineageId="Package\FactOrder\Get DimProduct Id.Outputs[Lookup Match Output].Columns[ProductID]"
                       name="ProductID"
-                      truncationRowDisposition="FailComponent">
+                      truncationRowDisposition="IgnoreFailure">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1344,112 +1489,112 @@ LEFT OUTER JOIN [dbo].[Orders] ON [dbo].[Order Details].OrderID = [dbo].[Orders]
                       refId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[OrderID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OrderID]"
                       lineageId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[OrderID]"
                       name="OrderID"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                     <outputColumn
                       refId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProductID]"
                       lineageId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductID]"
                       name="ProductID"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                     <outputColumn
                       refId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[UnitPrice]"
                       dataType="cy"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
                       lineageId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[UnitPrice]"
                       name="UnitPrice"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                     <outputColumn
                       refId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Quantity]"
                       dataType="i2"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Quantity]"
                       lineageId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Quantity]"
                       name="Quantity"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                     <outputColumn
                       refId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Discount]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Discount]"
                       lineageId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[Discount]"
                       name="Discount"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                     <outputColumn
                       refId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerID]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
                       length="5"
                       lineageId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerID]"
                       name="CustomerID"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                     <outputColumn
                       refId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmployeeID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EmployeeID]"
                       lineageId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmployeeID]"
                       name="EmployeeID"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                     <outputColumn
                       refId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[ShipVia]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ShipVia]"
                       lineageId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[ShipVia]"
                       name="ShipVia"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                     <outputColumn
                       refId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[OrderDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
                       lineageId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[OrderDate]"
                       name="OrderDate"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                     <outputColumn
                       refId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[ShippedDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ShippedDate]"
                       lineageId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[ShippedDate]"
                       name="ShippedDate"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                     <outputColumn
                       refId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsOnline]"
                       dataType="bool"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IsOnline]"
                       lineageId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsOnline]"
                       name="IsOnline"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                     <outputColumn
                       refId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[DBName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DBName]"
                       length="128"
                       lineageId="Package\FactOrder\OLE DB Source.Outputs[OLE DB Source Output].Columns[DBName]"
                       name="DBName"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="IgnoreFailure" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3026,6 +3171,97 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Sequence Container\DimCustomer\Flat File Destination"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="1033"
+                  name="Flat File Destination"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\DimCustomer\Flat File Destination.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input].Columns[CustomerID]"
+                          cachedDataType="wstr"
+                          cachedLength="5"
+                          cachedName="CustomerID"
+                          externalMetadataColumnId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CustomerID]"
+                          lineageId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerID]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input].Columns[CompanyName]"
+                          cachedDataType="wstr"
+                          cachedLength="40"
+                          cachedName="CompanyName"
+                          externalMetadataColumnId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CompanyName]"
+                          lineageId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input].Columns[City]"
+                          cachedDataType="wstr"
+                          cachedLength="15"
+                          cachedName="City"
+                          externalMetadataColumnId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[City]"
+                          lineageId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input].Columns[Country]"
+                          cachedDataType="wstr"
+                          cachedLength="15"
+                          cachedName="Country"
+                          externalMetadataColumnId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Country]"
+                          lineageId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CustomerID]"
+                          dataType="wstr"
+                          length="5"
+                          name="CustomerID" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CompanyName]"
+                          dataType="wstr"
+                          length="40"
+                          name="CompanyName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[City]"
+                          dataType="wstr"
+                          length="15"
+                          name="City" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Country]"
+                          dataType="wstr"
+                          length="15"
+                          name="Country" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\DimCustomer\Insert Destination"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -3093,7 +3329,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                     <input
                       refId="Package\Sequence Container\DimCustomer\Insert Destination.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
@@ -3462,42 +3698,42 @@ FROM [Foodies997].[dbo].[Customers]</property>
                           refId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerID]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
                           length="5"
                           lineageId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[CustomerID]"
                           name="CustomerID"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                         <outputColumn
                           refId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
                           length="40"
                           lineageId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]"
                           name="CompanyName"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                         <outputColumn
                           refId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[City]"
                           length="15"
                           lineageId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]"
                           name="City"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                         <outputColumn
                           refId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Country]"
                           length="15"
                           lineageId="Package\Sequence Container\DimCustomer\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]"
                           name="Country"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -4925,6 +5161,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   name="Clear null entries"
                   startId="Package\Sequence Container\DimCustomer\Conditional Split.Outputs[Clear null entries]" />
                 <path
+                  refId="Package\Sequence Container\DimCustomer.Paths[Conditional Split Default Output]"
+                  endId="Package\Sequence Container\DimCustomer\Flat File Destination.Inputs[Flat File Destination Input]"
+                  name="Conditional Split Default Output"
+                  startId="Package\Sequence Container\DimCustomer\Conditional Split.Outputs[Conditional Split Default Output]" />
+                <path
                   refId="Package\Sequence Container\DimCustomer.Paths[New Output]"
                   endId="Package\Sequence Container\DimCustomer\Insert Destination.Inputs[OLE DB Destination Input]"
                   name="New Output"
@@ -5448,11 +5689,11 @@ SELECT ShippedDate as Date From [dbo].[Orders] WHERE ShippedDate IS NOT NULL</pr
                           refId="Package\Sequence Container\DimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
                           dataType="dbTimeStamp"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimDate\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
                           lineageId="Package\Sequence Container\DimDate\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
                           name="Date"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -6782,6 +7023,83 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Sequence Container\DimEmployee\Flat File Destination"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="1033"
+                  name="Flat File Destination"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\DimEmployee\Flat File Destination.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\DimEmployee\Flat File Destination.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\DimEmployee\Flat File Destination.Inputs[Flat File Destination Input].Columns[EmployeeID]"
+                          cachedDataType="i4"
+                          cachedName="EmployeeID"
+                          externalMetadataColumnId="Package\Sequence Container\DimEmployee\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EmployeeID]"
+                          lineageId="Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmployeeID]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DimEmployee\Flat File Destination.Inputs[Flat File Destination Input].Columns[LastName]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="LastName"
+                          externalMetadataColumnId="Package\Sequence Container\DimEmployee\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LastName]"
+                          lineageId="Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastName]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DimEmployee\Flat File Destination.Inputs[Flat File Destination Input].Columns[FirstName]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="FirstName"
+                          externalMetadataColumnId="Package\Sequence Container\DimEmployee\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FirstName]"
+                          lineageId="Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[FirstName]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DimEmployee\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EmployeeID]"
+                          dataType="i4"
+                          name="EmployeeID" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DimEmployee\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[LastName]"
+                          dataType="wstr"
+                          length="20"
+                          name="LastName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DimEmployee\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FirstName]"
+                          dataType="wstr"
+                          length="10"
+                          name="FirstName" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\DimEmployee\Insert Destination"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -6849,7 +7167,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     <input
                       refId="Package\Sequence Container\DimEmployee\Insert Destination.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
@@ -7120,31 +7438,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           refId="Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmployeeID]"
                           dataType="i4"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EmployeeID]"
                           lineageId="Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmployeeID]"
                           name="EmployeeID"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                         <outputColumn
                           refId="Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastName]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
                           length="20"
                           lineageId="Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastName]"
                           name="LastName"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                         <outputColumn
                           refId="Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[FirstName]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
                           length="10"
                           lineageId="Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[FirstName]"
                           name="FirstName"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -7458,6 +7776,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   name="Clear null entries"
                   startId="Package\Sequence Container\DimEmployee\Conditional Split.Outputs[Clear null entries]" />
                 <path
+                  refId="Package\Sequence Container\DimEmployee.Paths[Conditional Split Default Output]"
+                  endId="Package\Sequence Container\DimEmployee\Flat File Destination.Inputs[Flat File Destination Input]"
+                  name="Conditional Split Default Output"
+                  startId="Package\Sequence Container\DimEmployee\Conditional Split.Outputs[Conditional Split Default Output]" />
+                <path
                   refId="Package\Sequence Container\DimEmployee.Paths[New Output]"
                   endId="Package\Sequence Container\DimEmployee\Insert Destination.Inputs[OLE DB Destination Input]"
                   name="New Output"
@@ -7576,6 +7899,83 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Sequence Container\DimProduct\Flat File Destination"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="1033"
+                  name="Flat File Destination"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\DimProduct\Flat File Destination.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 3]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\DimProduct\Flat File Destination.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\DimProduct\Flat File Destination.Inputs[Flat File Destination Input].Columns[ProductID]"
+                          cachedDataType="i4"
+                          cachedName="ProductID"
+                          externalMetadataColumnId="Package\Sequence Container\DimProduct\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ProductID]"
+                          lineageId="Package\Sequence Container\DimProduct\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductID]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DimProduct\Flat File Destination.Inputs[Flat File Destination Input].Columns[ProductName]"
+                          cachedDataType="wstr"
+                          cachedLength="40"
+                          cachedName="ProductName"
+                          externalMetadataColumnId="Package\Sequence Container\DimProduct\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ProductName]"
+                          lineageId="Package\Sequence Container\DimProduct\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductName]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DimProduct\Flat File Destination.Inputs[Flat File Destination Input].Columns[CategoryName]"
+                          cachedDataType="wstr"
+                          cachedLength="15"
+                          cachedName="CategoryName"
+                          externalMetadataColumnId="Package\Sequence Container\DimProduct\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CategoryName]"
+                          lineageId="Package\Sequence Container\DimProduct\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryName]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DimProduct\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ProductID]"
+                          dataType="i4"
+                          name="ProductID" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DimProduct\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ProductName]"
+                          dataType="wstr"
+                          length="40"
+                          name="ProductName" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DimProduct\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CategoryName]"
+                          dataType="wstr"
+                          length="15"
+                          name="CategoryName" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
                   refId="Package\Sequence Container\DimProduct\Insert Destination"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -7643,7 +8043,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                     <input
                       refId="Package\Sequence Container\DimProduct\Insert Destination.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
@@ -7946,31 +8346,31 @@ FROM [dbo].[Products] LEFT OUTER JOIN [dbo].[Categories] ON  [dbo].[Products].Ca
                           refId="Package\Sequence Container\DimProduct\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductID]"
                           dataType="i4"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimProduct\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProductID]"
                           lineageId="Package\Sequence Container\DimProduct\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductID]"
                           name="ProductID"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                         <outputColumn
                           refId="Package\Sequence Container\DimProduct\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductName]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimProduct\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ProductName]"
                           length="40"
                           lineageId="Package\Sequence Container\DimProduct\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductName]"
                           name="ProductName"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                         <outputColumn
                           refId="Package\Sequence Container\DimProduct\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryName]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimProduct\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CategoryName]"
                           length="15"
                           lineageId="Package\Sequence Container\DimProduct\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryName]"
                           name="CategoryName"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -9179,6 +9579,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   name="Clear null entries"
                   startId="Package\Sequence Container\DimProduct\Conditional Split.Outputs[Clear null entries]" />
                 <path
+                  refId="Package\Sequence Container\DimProduct.Paths[Conditional Split Default Output]"
+                  endId="Package\Sequence Container\DimProduct\Flat File Destination.Inputs[Flat File Destination Input]"
+                  name="Conditional Split Default Output"
+                  startId="Package\Sequence Container\DimProduct\Conditional Split.Outputs[Conditional Split Default Output]" />
+                <path
                   refId="Package\Sequence Container\DimProduct.Paths[New Output]"
                   endId="Package\Sequence Container\DimProduct\Insert Destination.Inputs[OLE DB Destination Input]"
                   name="New Output"
@@ -9434,7 +9839,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <input
                       refId="Package\Sequence Container\DimShipper\Insert Destination.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="IgnoreFailure"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
@@ -9674,21 +10079,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           refId="Package\Sequence Container\DimShipper\OLE DB Source.Outputs[OLE DB Source Output].Columns[ShipperID]"
                           dataType="i4"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimShipper\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ShipperID]"
                           lineageId="Package\Sequence Container\DimShipper\OLE DB Source.Outputs[OLE DB Source Output].Columns[ShipperID]"
                           name="ShipperID"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                         <outputColumn
                           refId="Package\Sequence Container\DimShipper\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\DimShipper\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
                           length="40"
                           lineageId="Package\Sequence Container\DimShipper\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]"
                           name="CompanyName"
-                          truncationRowDisposition="FailComponent" />
+                          truncationRowDisposition="IgnoreFailure" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -10067,7 +10472,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,5.20413652811081,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,5.2041365281108,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10159,7 +10564,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.45707787081423,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,7.45707787081425,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10207,7 +10612,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.66295882418072,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,7.6629588241807,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10231,7 +10636,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,9.71001848423776,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,9.71001848423775,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10257,7 +10662,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10280,7 +10685,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10303,7 +10708,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10334,7 +10739,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10357,7 +10762,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10380,7 +10785,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10526,7 +10931,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-37.84509765625,21.3754882812499,75.6901953125,9.7490234375"
+              BoundingBox="-37.84509765625,21.37548828125,75.6901953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10563,6 +10968,34 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-36.5187547348484,30.3782095766829,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Sequence Container\DimCustomer\Flat File Destination"
+          TopLeft="1032,135" />
+        <EdgeLayout
+          Id="Package\Sequence Container\DimCustomer.Paths[Conditional Split Default Output]"
+          TopLeft="869.9,155.85">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="162.1,0"
+              Start="0,0"
+              End="154.6,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="154.6,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="6.68609375,5,141.2278125,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10633,6 +11066,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
   &lt;DateVariable /&gt;
   &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\DimCustomer\Insert Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -10764,7 +11210,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,9.67561553030336,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,9.67561553030335,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10964,7 +11410,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-122.424720052083,29.2748091603054,54.1827734375,11.43359375"
+              BoundingBox="-122.424720052084,29.2748091603054,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Sequence Container\DimEmployee\Flat File Destination"
+          TopLeft="1006,154" />
+        <EdgeLayout
+          Id="Package\Sequence Container\DimEmployee.Paths[Conditional Split Default Output]"
+          TopLeft="852.445454545455,174.986363636364">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="153.554545454545,0"
+              Start="0,0"
+              End="146.054545454545,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="146.054545454545,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="2.41336647727246,5,141.2278125,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -11022,6 +11496,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\DimEmployee\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\DimEmployee\Insert Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11190,6 +11677,34 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Sequence Container\DimProduct\Flat File Destination"
+          TopLeft="965,87.0000000000001" />
+        <EdgeLayout
+          Id="Package\Sequence Container\DimProduct.Paths[Conditional Split Default Output]"
+          TopLeft="787.627272727273,108.759090909091">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="177.372727272727,0"
+              Start="0,0"
+              End="169.872727272727,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="169.872727272727,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="14.3224573863635,5,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -11277,30 +11792,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         <NodeLayout
           Size="208,41.6"
           Id="Package\Sequence Container\DimShipper\Slowly Changing Dimension"
-          TopLeft="206.7,208.7" />
+          TopLeft="630.7,299.7" />
         <NodeLayout
           Size="171.2,41.6"
           Id="Package\Sequence Container\DimShipper\Flat File Destination"
-          TopLeft="552.857152272244,101.705883779328" />
+          TopLeft="976.857152272244,192.705883779328" />
         <NodeLayout
           Size="164.8,41.6"
           Id="Package\Sequence Container\DimShipper\OLE DB Command"
-          TopLeft="279.014286577945,314.888235358466" />
+          TopLeft="703.014286577945,405.888235358466" />
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\Sequence Container\DimShipper\OLE DB Source"
-          TopLeft="235.9,5.49999999999984" />
+          TopLeft="659.9,96.4999999999998" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Sequence Container\DimShipper\Insert Destination"
-          TopLeft="5.5000000000001,310.3" />
+          TopLeft="429.5,401.3" />
         <NodeLayout
           Size="154.4,41.6"
           Id="Package\Sequence Container\DimShipper\Conditional Split"
-          TopLeft="234.285718275576,97.1176484208619" />
+          TopLeft="658.285718275576,188.117648420862" />
         <EdgeLayout
           Id="Package\Sequence Container\DimShipper.Paths[OLE DB Source Output]"
-          TopLeft="311.092859137788,47.0999999999998">
+          TopLeft="735.092859137788,138.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11322,7 +11837,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimShipper.Paths[New Output]"
-          TopLeft="277.366666666667,250.3">
+          TopLeft="701.366666666667,341.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11352,13 +11867,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-122.424720052084,29.2748091603053,54.1827734375,11.43359375"
+              BoundingBox="-122.424720052083,29.2748091603053,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimShipper.Paths[Conditional Split Default Output]"
-          TopLeft="388.685718275576,120.211766100095">
+          TopLeft="812.685718275576,211.211766100095">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11376,13 +11891,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="7.72181074833412,5,141.2278125,11.658203125"
+              BoundingBox="7.72181074833395,5,141.2278125,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimShipper.Paths[Clear null entries]"
-          TopLeft="311.092859137788,138.717648420862">
+          TopLeft="735.092859137788,229.717648420862">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11400,13 +11915,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-37.84509765625,26.3666640708189,75.6901953125,9.7490234375"
+              BoundingBox="-37.84509765625,26.366664070819,75.6901953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimShipper.Paths[Changing Attribute Updates Output]"
-          TopLeft="344.033333333333,250.3">
+          TopLeft="768.033333333333,341.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
