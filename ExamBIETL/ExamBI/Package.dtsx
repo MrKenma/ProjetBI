@@ -11,34 +11,42 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="62"
-  DTS:VersionGUID="{6445B7D1-4DE4-49A3-AD54-B9B9D05995D8}">
+  DTS:VersionBuild="66"
+  DTS:VersionGUID="{2A153C7E-F5DA-44D7-B782-0BBB692DD40C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{574999FF-7169-4ACB-91DD-5085D7F1D19F}"
+      DTS:DTSID="{64BC10FC-3B45-4DEB-93F2-E695B36628EA}"
       DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:Format="RaggedRight"
-          DTS:LocaleID="1033"
+          DTS:Format="Delimited"
+          DTS:LocaleID="2060"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\jujul\Informatique_de_gestion\3e_annee\Business Intelligence and Data Analytics\BI\ProjetBI\test.txt">
+          DTS:ConnectionString="C:\Users\jujul\Informatique_de_gestion\3e_annee\Business Intelligence and Data Analytics\BI\ProjetBI\ExamBIETL\ErrorsDimShipper.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ShipperID"
+              DTS:DTSID="{30F97128-6FB7-42CB-B8C4-9F7618B07B36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="64"
+              DTS:MaximumWidth="40"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="DBName"
-              DTS:DTSID="{A3B9A555-DF48-4179-B0D3-49EE17183ABD}"
+              DTS:ObjectName="CompanyName"
+              DTS:DTSID="{636A1F82-9558-43D5-BA11-D49B59DC4D67}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1050,7 +1058,7 @@ where [refTable].[ShipperAltID] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[FactOrderDetails]</property>
+                  name="OpenRowset">[dbo].[FactSales]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -3797,7 +3805,7 @@ FROM [Foodies997].[dbo].[Customers]</property>
                         <arrayElement
                           dataType="System.String"><![CDATA[UTF8]]></arrayElement>
                         <arrayElement
-                          dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+                          dataType="System.String"><![CDATA[ #region Help:  Introduction to the Script Component
 /* The Script Component allows you to perform virtually any operation that can be accomplished in
  * a .Net application within the context of an Integration Services data flow.
  *
@@ -3937,13 +3945,13 @@ public class ScriptMain : UserComponent
         (Row.City == "Torino") ? "Turin" :
         (Row.City == "Lisboa") ? "Lisbonne" :
         (Row.City == "Barcelona") ? "Barcelone" :
-        (Row.City == "Sevilla") ? "S�ville" :
+        (Row.City == "Sevilla") ? "Séville" :
         (Row.City == "Brandenburg") ? "Brandebourg" :
         (Row.City == "Frankfurt a.M.") ? "Francfort-sur-le-Main" :
         (Row.City == "Bergamo") ? "Bergame" :
         (Row.City == "Köln") ? "Cologne" :
         (Row.City == "Salzburg") ? "Salzbourg" :
-        (Row.City == "Reggio Emilia") ? "Reggio d��mile" :
+        (Row.City == "Reggio Emilia") ? "Reggio d'Émilie" :
         (Row.City == "Kobenhavn") ? "Copenhague" :
         (Row.City == "Århus") ? "Aarhus" :
         (Row.City == "Warszawa") ? "Varsovie" : Row.City;
@@ -3963,7 +3971,7 @@ public class ScriptMain : UserComponent
             (Row.Country == "USA") ? "États-Unis" :
             (Row.Country == "Ireland") ? "Irlande" :
             (Row.Country == "Belgium") ? "Belgique" :
-            (Row.Country == "Norway") ? "Norv�ge" :
+            (Row.Country == "Norway") ? "Norvège" :
             (Row.Country == "Denmark") ? "Danemark" :
             (Row.Country == "Finland") ? "Finlande" :
             (Row.Country == "Poland") ? "Pologne" : Row.Country;
@@ -4242,7 +4250,7 @@ public class Variables
     <msb:CodeName>SC_6c4713e54b2040c7972f13563411186a</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_6c4713e54b2040c7972f13563411186a</msb:DisplayName>
-    <msb:ProjectId>{C48C84BF-4AA4-42CB-91BE-BA6B1FC51548}</msb:ProjectId>
+    <msb:ProjectId>{AEB24085-8FD7-4339-9848-D4EEA678EB33}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_6c4713e54b2040c7972f13563411186a.csproj" />
@@ -4389,14 +4397,14 @@ namespace SC_6c4713e54b2040c7972f13563411186a.Properties {
                         <arrayElement
                           dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDALAUpGQAAAAAAAAAAOAAIiALATAAACAAAAAIAAAAAAAA0j4A
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDADres2QAAAAAAAAAAOAAIiALATAAACAAAAAIAAAAAAAA1j4A
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIA+AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIQ+AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA2B4AAAAgAAAAIAAAAAIA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA3B4AAAAgAAAAIAAAAAIA
 AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAiAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAKAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAC0
-PgAAAAAAAEgAAAACAAUAmCcAADAWAAABAAAAAAAAAMg9AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAKAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAC4
+PgAAAAAAAEgAAAACAAUAmCcAADQWAAABAAAAAAAAAMw9AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACioTMAMAcwUAAAAAAAADA28HAAAG
 OkkBAAADbwYAAAZyAQAAcCgSAAAKOi0BAAADbwYAAAZyGQAAcCgSAAAKOhEBAAADbwYAAAZyLQAA
 cCgSAAAKOvUAAAADbwYAAAZyPQAAcCgSAAAKOtkAAAADbwYAAAZySwAAcCgSAAAKOr0AAAADbwYA
@@ -4411,27 +4419,27 @@ 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
-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
+bwYAAAY4jQAAAHJhAgBwOIMAAABy1wAAcCt8cnMCAHArdXKJAgBwK25yqQIAcCtncgkBAHArYHK9
+AgBwK1lyzQIAcCtScvkCAHArS3IRAwBwK0RyIQMAcCs9cjUDAHArNnJLAQBwKy9yVwEAcCsockcD
+AHArIXJnAwBwKxpyZQEAcCsTcnMDAHArDHKDAwBwKwVykQMAcG8MAAAGAwNvCQAABi0IA28IAAAG
+KwVykwEAcG8OAAAGAwNvCQAABjq5AQAAA28IAAAGcqMDAHAoEgAACjqdAQAAA28IAAAGcrMDAHAo
+EgAACjqBAQAAA28IAAAGcrkDAHAoEgAACjplAQAAA28IAAAGcscDAHAoEgAACjpJAQAAA28IAAAG
+ctMDAHAoEgAACjotAQAAA28IAAAGcucDAHAoEgAACjoRAQAAA28IAAAGcv8DAHAoEgAACjr1AAAA
+A28IAAAGcg0EAHAoEgAACjrZAAAAA28IAAAGch0EAHAoEgAACjq9AAAAA28IAAAGcikEAHAoEgAA
+CjqhAAAAA28IAAAGcjEEAHAoEgAACjqFAAAAA28IAAAGckEEAHAoEgAACi1sA28IAAAGclEEAHAo
+EgAACi1TA28IAAAGcl8EAHAoEgAACi06A28IAAAGcm8EAHAoEgAACi0hA28IAAAGcn8EAHAoEgAA
+Ci0IA28IAAAGK3VyjQQAcCtucp0EAHArZ3KvBABwK2BywQQAcCtZctEEAHArUnLjBABwK0ty8wQA
+cCtEcgkFAHArPXIXBQBwKzZyKQUAcCsvcjcFAHArKHJFBQBwKyFyWQUAcCsacmkFAHArE3J1BQBw
+KwxyjwUAcCsFcqMFAHBvEAAABioeAigUAAAGKioCAwQFKBMAAAoqUgJ7FAAACgJ7FQAAChaUbxYA
 AAoqIgIWKBcAAAoqUgJ7FAAACgJ7FQAACheUbxYAAAoqIgIXKBcAAAoqJgIYAygYAAAKKloDLAgC
-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
+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
-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
+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
-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
+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
@@ -4502,39 +4510,39 @@ AG4AABdNAGUAeABpAGMAbwAgAEMAaQB0AHkAAA9VAG4AawBuAG8AdwBuAAANTABvAG4AZABvAG4A
 AAlCAGUAcgBuAAANQQBhAGMAaABlAG4AABNCAGEAcgBjAGUAbABvAG4AYQAAD1MAZQB2AGkAbABs
 AGEAABdCAHIAYQBuAGQAZQBuAGIAdQByAGcAAB1GAHIAYQBuAGsAZgB1AHIAdAAgAGEALgBNAC4A
 AA9CAGUAcgBnAGEAbQBvAAARUwBhAGwAegBiAHUAcgBnAAAbUgBlAGcAZwBpAG8AIABFAG0AaQBs
-AGkAYQAAEVYAYQByAHMAbwB2AGkAZQAAFUMAbwBwAGUAbgBoAGEAZwB1AGUAAB1SAGUAZwBnAGkA
-bwAgAGQA/f/9/20AaQBsAGUAARNTAGEAbAB6AGIAbwB1AHIAZwAAD0IAZQByAGcAYQBtAGUAACtG
-AHIAYQBuAGMAZgBvAHIAdAAtAHMAdQByAC0AbABlAC0ATQBhAGkAbgABF0IAcgBhAG4AZABlAGIA
-bwB1AHIAZwAAD1MA/f92AGkAbABsAGUAARNCAGEAcgBjAGUAbABvAG4AZQAAEUwAaQBzAGIAbwBu
-AG4AZQAAH0EAaQB4AC0ATABhAC0AQwBoAGEAcABlAGwAbABlAAELQgBlAHIAbgBlAAAPTABvAG4A
-ZAByAGUAcwAADU0AZQB4AGkAYwBvAAARSQBuAGMAbwBuAG4AdQBlAAAPRwBlAHIAbQBhAG4AeQAA
-BVUASwAADVMAdwBlAGQAZQBuAAALUwBwAGEAaQBuAAATQQByAGcAZQBuAHQAaQBuAGEAABdTAHcA
-aQB0AHoAZQByAGwAYQBuAGQAAA1CAHIAYQB6AGkAbAAAD0EAdQBzAHQAcgBpAGEAAAtJAHQAYQBs
-AHkAAAdVAFMAQQAAD0kAcgBlAGwAYQBuAGQAAA9CAGUAbABnAGkAdQBtAAANTgBvAHIAdwBhAHkA
-AA9EAGUAbgBtAGEAcgBrAAAPRgBpAG4AbABhAG4AZAAADVAAbwBsAGEAbgBkAAAPUABvAGwAbwBn
-AG4AZQAAEUYAaQBuAGwAYQBuAGQAZQAAEUQAYQBuAGUAbQBhAHIAawAAD04AbwByAHYA/f9nAGUA
-ARFCAGUAbABnAGkAcQB1AGUAAA9JAHIAbABhAG4AZABlAAAVyQB0AGEAdABzAC0AVQBuAGkAcwAB
-DUkAdABhAGwAaQBlAAARQQB1AHQAcgBpAGMAaABlAAANQgByAOkAcwBpAGwAAQ1TAHUAaQBzAHMA
-ZQAAE0EAcgBnAGUAbgB0AGkAbgBlAAAPRQBzAHAAYQBnAG4AZQAAC1MAdQDoAGQAZQABGVIAbwB5
-AGEAdQBtAGUALQBVAG4AaQBzAAETQQBsAGwAZQBtAGEAZwBuAGUAAA9JAG4AYwBvAG4AbgB1AACA
-m0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUA
-dAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABv
-ACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAA
-AHFTAEMAXwA2AGMANAA3ADEAMwBlADUANABiADIAMAA0ADAAYwA3ADkANwAyAGYAMQAzADUANgAz
-ADQAMQAxADEAOAA2AGEALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMA
-AI8XmIuQefRCgjfheLFzZ+gABCABAQgDIAABBSABARERBCABAQ4FIAEBEVkFAAICDg4JIAMBEj0d
-CBJBAwYSPQMGHQgEIAEOCAQgAQIIBSACAQgcAyAAAgYgAgIOEXEFIAEdCAgGAAESdRF5BCAAEn0G
-IAIBDhJ9CLd6XFYZNOCJCImEXc2AgMyRAwYSFAMGEhgDBhJFAwYSUQMGElUDBhIgBSABARIMAyAA
-DgQgAQECCSAEAQgOEj0SQQUgAQESRQQAABJRBAAAElUFAAEBElUEAAASIAMAAAEDKAAOAygAAgQI
-ABJRBAgAElUECAASIAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQAC
-AAAAAAAoAQAjU0NfNmM0NzEzZTU0YjIwNDBjNzk3MmYxMzU2MzQxMTE4NmEAAAUBAAAAABYBABFD
-b3B5cmlnaHQgQCAgMjAyMwAASQEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC43AQBUDhRGcmFt
-ZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjcEAQAAAAAAtAAAAM7K774BAAAAkQAA
-AGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAu
-MC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lz
-dGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAKg+
-AAAAAAAAAAAAAMI+AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC0PgAAAAAAAAAAAAAAAF9Db3JE
-bGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AGkAYQAAEVYAYQByAHMAbwB2AGkAZQAAFUMAbwBwAGUAbgBoAGEAZwB1AGUAAB9SAGUAZwBnAGkA
+bwAgAGQAJwDJAG0AaQBsAGkAZQABE1MAYQBsAHoAYgBvAHUAcgBnAAAPQgBlAHIAZwBhAG0AZQAA
+K0YAcgBhAG4AYwBmAG8AcgB0AC0AcwB1AHIALQBsAGUALQBNAGEAaQBuAAEXQgByAGEAbgBkAGUA
+YgBvAHUAcgBnAAAPUwDpAHYAaQBsAGwAZQABE0IAYQByAGMAZQBsAG8AbgBlAAARTABpAHMAYgBv
+AG4AbgBlAAAfQQBpAHgALQBMAGEALQBDAGgAYQBwAGUAbABsAGUAAQtCAGUAcgBuAGUAAA9MAG8A
+bgBkAHIAZQBzAAANTQBlAHgAaQBjAG8AABFJAG4AYwBvAG4AbgB1AGUAAA9HAGUAcgBtAGEAbgB5
+AAAFVQBLAAANUwB3AGUAZABlAG4AAAtTAHAAYQBpAG4AABNBAHIAZwBlAG4AdABpAG4AYQAAF1MA
+dwBpAHQAegBlAHIAbABhAG4AZAAADUIAcgBhAHoAaQBsAAAPQQB1AHMAdAByAGkAYQAAC0kAdABh
+AGwAeQAAB1UAUwBBAAAPSQByAGUAbABhAG4AZAAAD0IAZQBsAGcAaQB1AG0AAA1OAG8AcgB3AGEA
+eQAAD0QAZQBuAG0AYQByAGsAAA9GAGkAbgBsAGEAbgBkAAANUABvAGwAYQBuAGQAAA9QAG8AbABv
+AGcAbgBlAAARRgBpAG4AbABhAG4AZABlAAARRABhAG4AZQBtAGEAcgBrAAAPTgBvAHIAdgDoAGcA
+ZQABEUIAZQBsAGcAaQBxAHUAZQAAD0kAcgBsAGEAbgBkAGUAABXJAHQAYQB0AHMALQBVAG4AaQBz
+AAENSQB0AGEAbABpAGUAABFBAHUAdAByAGkAYwBoAGUAAA1CAHIA6QBzAGkAbAABDVMAdQBpAHMA
+cwBlAAATQQByAGcAZQBuAHQAaQBuAGUAAA9FAHMAcABhAGcAbgBlAAALUwB1AOgAZABlAAEZUgBv
+AHkAYQB1AG0AZQAtAFUAbgBpAHMAARNBAGwAbABlAG0AYQBnAG4AZQAAD0kAbgBjAG8AbgBuAHUA
+AICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMA
+ZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0
+AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAA
+MAAAcVMAQwBfADYAYwA0ADcAMQAzAGUANQA0AGIAMgAwADQAMABjADcAOQA3ADIAZgAxADMANQA2
+ADMANAAxADEAMQA4ADYAYQAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUA
+cwAAAAB6PtptRDrsTLoR63kT6JhQAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFZBQACAg4OCSAD
+ARI9HQgSQQMGEj0DBh0IBCABDggEIAECCAUgAgEIHAMgAAIGIAICDhFxBSABHQgIBgABEnUReQQg
+ABJ9BiACAQ4SfQi3elxWGTTgiQiJhF3NgIDMkQMGEhQDBhIYAwYSRQMGElEDBhJVAwYSIAUgAQES
+DAMgAA4EIAEBAgkgBAEIDhI9EkEFIAEBEkUEAAASUQQAABJVBQABARJVBAAAEiADAAABAygADgMo
+AAIECAASUQQIABJVBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MB
+CAEAAgAAAAAAKAEAI1NDXzZjNDcxM2U1NGIyMDQwYzc5NzJmMTM1NjM0MTExODZhAAAFAQAAAAAW
+AQARQ29weXJpZ2h0IEAgIDIwMjMAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4U
+RnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43BAEAAAAAALQAAADOyu++AQAA
+AJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249
+NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5
+I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQA
+AACsPgAAAAAAAAAAAADGPgAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuD4AAAAAAAAAAAAAAABf
+Q29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -4566,7 +4574,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAA1D4AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAA2D4AAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -6022,23 +6030,23 @@ public class Variables
                           dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
                         <arrayElement
                           dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
   <msb:PropertyGroup>
-    <msb:Language>msBuild</msb:Language>
     <msb:CodeName>SC_ee59868949ac44a9a7bf94992a3d8dcd</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_ee59868949ac44a9a7bf94992a3d8dcd</msb:DisplayName>
-    <msb:ProjectId>{0A52D0E7-667F-4DCB-AA86-C9BD18FD6AE5}</msb:ProjectId>
+    <msb:ProjectId>{65463BCE-D978-46B5-8E66-FBCC62230A4D}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_ee59868949ac44a9a7bf94992a3d8dcd.csproj" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
     <msb:File Include="main.cs" />
     <msb:File Include="BufferWrapper.cs" />
-    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
     <msb:File Include="Properties\Settings.settings" />
     <msb:File Include="Properties\AssemblyInfo.cs" />
     <msb:File Include="Properties\Resources.resx" />
     <msb:File Include="Properties\Resources.Designer.cs" />
-    <msb:File Include="ComponentWrapper.cs" />
   </msb:ItemGroup>
 </c:Project>]]></arrayElement>
                         <arrayElement
@@ -6095,6 +6103,7 @@ namespace SC_ee59868949ac44a9a7bf94992a3d8dcd.Properties {
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -6264,7 +6273,7 @@ namespace SC_ee59868949ac44a9a7bf94992a3d8dcd.Properties {
                         <arrayElement
                           dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAOXuo2QAAAAAAAAAAOAAIiALATAAABoAAAAIAAAAAAAAMjgA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAJbRs2QAAAAAAAAAAOAAIiALATAAABoAAAAIAAAAAAAAMjgA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAOA3AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -6366,7 +6375,7 @@ ACAAcwBlAHQAIAB0AG8AIABGAGEAbABzAGUALgAgAEEAcwBzAGkAZwBuACAAYQAgAHYAYQBsAHUA
 ZQAgAHQAbwAgAHQAaABlACAAYwBvAGwAdQBtAG4AIABpAG4AcwB0AGUAYQBkAC4AAA9JAG4AcAB1
 AHQAIAAwAABxUwBDAF8AZQBlADUAOQA4ADYAOAA5ADQAOQBhAGMANAA0AGEAOQBhADcAYgBmADkA
 NAA5ADkAMgBhADMAZAA4AGQAYwBkAC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQBy
-AGMAZQBzAADGWoJSZGf9RbHNXkSnAsu5AAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFlBCAAEnUE
+AGMAZQBzAACGUTHyHoxeQYoXA8tYv7VrAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFlBCAAEnUE
 IAARPQQgABFBBAcBEUUDIAAIBCAAEnkJIAMIEUURPRFBBiACDg4SfQkgAwESTR0IElEDBhJNAwYd
 CAUgARFFCAQgAQIIBSACAQgcAyAAAgcgAgIOEYCNBSABHQgICAABEoCREYCVBSAAEoCZByACAQ4S
 gJkIt3pcVhk04IkIiYRdzYCAzJEDBhI5AwYRPQMGEUEDBhIUAwYSGAMGElUDBhJhAwYSIAUgAQES
@@ -6720,13 +6729,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           containsID="true"
                           dataType="System.String"
                           description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                          name="Expression">![ISNULL](#{Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[FirstName]}) &amp;&amp; ![ISNULL](#{Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastName]})</property>
+                          name="Expression">![ISNULL](#{Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[FirstName]}) || ![ISNULL](#{Package\Sequence Container\DimEmployee\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastName]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Specifies the friendly version of the expression. This expression version uses column names."
                           expressionType="Notify"
-                          name="FriendlyExpression">!ISNULL(FirstName) &amp;&amp; !ISNULL(LastName)</property>
+                          name="FriendlyExpression">!ISNULL(FirstName) || !ISNULL(LastName)</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -8578,7 +8587,7 @@ namespace SC_afbec53179ec46f8b8034545531641cd.Properties {
     <msb:CodeName>SC_afbec53179ec46f8b8034545531641cd</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_afbec53179ec46f8b8034545531641cd</msb:DisplayName>
-    <msb:ProjectId>{5B184148-4C10-402A-9DB9-AB04430CF5E6}</msb:ProjectId>
+    <msb:ProjectId>{FFDE714B-F286-497C-A23A-41C06E4764F7}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_afbec53179ec46f8b8034545531641cd.csproj" />
@@ -8745,7 +8754,7 @@ using System.Runtime.CompilerServices;
                         <arrayElement
                           dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDANAwpGQAAAAAAAAAAOAAIiALATAAABYAAAAIAAAAAAAAAjUA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAIjPs2QAAAAAAAAAAOAAIiALATAAABYAAAAIAAAAAAAAAjUA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAALA0AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -8833,8 +8842,8 @@ AHUAbABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQA
 bwAgAEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABo
 AGUAIABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFTAEMA
 XwBhAGYAYgBlAGMANQAzADEANwA5AGUAYwA0ADYAZgA4AGIAOAAwADMANAA1ADQANQA1ADMAMQA2
-ADQAMQBjAGQALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAAv7fl
-WuIqtE6+fZon9wFAqQAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQUAAgIODgkgAwESPR0IEkED
+ADQAMQBjAGQALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAA7/ei
+PFerOkKSc7JPgtiXvgAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQUAAgIODgkgAwESPR0IEkED
 BhI9AwYdCAQgAQ4IBCABAggFIAIBCBwDIAACBiACAg4RcQUgAR0ICAYAARJ1EXkEIAASfQYgAgEO
 En0It3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwDIAAOBCAB
 AQIJIAQBCA4SPRJBBSABARJFBAAAElEEAAASVQUAAQESVQQAABIgAwAAAQMoAA4DKAACBAgAElEE
@@ -9291,6 +9300,71 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       <externalMetadataColumns />
                     </output>
                   </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\DimShipper\Flat File Destination"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="2060"
+                  name="Flat File Destination"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\DimShipper\Flat File Destination.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\DimShipper\Flat File Destination.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\DimShipper\Flat File Destination.Inputs[Flat File Destination Input].Columns[ShipperID]"
+                          cachedDataType="i4"
+                          cachedName="ShipperID"
+                          externalMetadataColumnId="Package\Sequence Container\DimShipper\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ShipperID]"
+                          lineageId="Package\Sequence Container\DimShipper\OLE DB Source.Outputs[OLE DB Source Output].Columns[ShipperID]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\DimShipper\Flat File Destination.Inputs[Flat File Destination Input].Columns[CompanyName]"
+                          cachedDataType="wstr"
+                          cachedLength="40"
+                          cachedName="CompanyName"
+                          externalMetadataColumnId="Package\Sequence Container\DimShipper\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CompanyName]"
+                          lineageId="Package\Sequence Container\DimShipper\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DimShipper\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ShipperID]"
+                          dataType="i4"
+                          name="ShipperID" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\DimShipper\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CompanyName]"
+                          dataType="wstr"
+                          length="40"
+                          name="CompanyName" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
                 </component>
                 <component
                   refId="Package\Sequence Container\DimShipper\Insert Destination"
@@ -9833,6 +9907,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   name="Clear null entries"
                   startId="Package\Sequence Container\DimShipper\Conditional Split.Outputs[Clear null entries]" />
                 <path
+                  refId="Package\Sequence Container\DimShipper.Paths[Conditional Split Default Output]"
+                  endId="Package\Sequence Container\DimShipper\Flat File Destination.Inputs[Flat File Destination Input]"
+                  name="Conditional Split Default Output"
+                  startId="Package\Sequence Container\DimShipper\Conditional Split.Outputs[Conditional Split Default Output]" />
+                <path
                   refId="Package\Sequence Container\DimShipper.Paths[New Output]"
                   endId="Package\Sequence Container\DimShipper\Insert Destination.Inputs[OLE DB Destination Input]"
                   name="New Output"
@@ -9933,6 +10012,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\FactOrder\OLE DB Destination"
+          TopLeft="538.571437743246,600.329416526479" />
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\FactOrder\Get DimDate Order Id"
+          TopLeft="535.000009110996,141.235295200843" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\FactOrder\Get DimEmployee Id"
+          TopLeft="537.142866290346,373.047063853419" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\FactOrder\Get DimShipper Id"
+          TopLeft="542.857152101945,444.16471190964" />
+        <NodeLayout
           Size="149.6,41.6"
           Id="Package\FactOrder\OLE DB Source"
           TopLeft="547.785711463617,9.25294070458332" />
@@ -9945,37 +10040,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Id="Package\FactOrder\Get DimCustomer Id"
           TopLeft="536.428580563895,294.28235686642" />
         <NodeLayout
-          Size="175.2,41.6"
-          Id="Package\FactOrder\Get DimEmployee Id"
-          TopLeft="537.142866290346,373.047063853419" />
-        <EdgeLayout
-          Id="Package\FactOrder.Paths[Lookup Match Output]"
-          TopLeft="624.18572342712,335.882356866421">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37.164706986998"
-              Start="0,0"
-              End="0,29.664706986998">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.664706986998" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,9.027665993499,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="192.8,41.6"
+          Id="Package\FactOrder\Get DimDate Shipped Id"
+          TopLeft="525.000008940697,218.658826124792" />
         <NodeLayout
           Size="165.6,41.6"
-          Id="Package\FactOrder\Get DimShipper Id"
-          TopLeft="542.857152101945,444.16471190964" />
+          Id="Package\FactOrder\Get DimProduct Id"
+          TopLeft="541.428580649045,524.294123878116" />
         <EdgeLayout
           Id="Package\FactOrder.Paths[Lookup Match Output1]"
           TopLeft="625.200009196145,414.647063853419">
@@ -10000,88 +10071,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="165.6,41.6"
-          Id="Package\FactOrder\Get DimProduct Id"
-          TopLeft="541.428580649045,524.294123878116" />
         <EdgeLayout
-          Id="Package\FactOrder.Paths[Lookup Match Output2]"
-          TopLeft="624.942866375495,485.76471190964">
+          Id="Package\FactOrder.Paths[Lookup Match Output]"
+          TopLeft="624.18572342712,335.882356866421">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38.5294119684755"
+              EndConnector="0,37.164706986998"
               Start="0,0"
-              End="0,31.0294119684755">
+              End="0,29.664706986998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.0294119684755" />
+                    End="0,29.664706986998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,9.71001848423776,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,9.027665993499,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\FactOrder\OLE DB Destination"
-          TopLeft="538.571437743246,600.329416526479" />
-        <EdgeLayout
-          Id="Package\FactOrder.Paths[OLE DB Source Output]"
-          TopLeft="623.107140095867,50.8529407045833">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,25.0882326236643"
-              Start="0,0"
-              End="0,17.5882326236643">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.5882326236643" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\FactOrder.Paths[Lookup Match Output3]"
-          TopLeft="624.000009196145,565.894123878117">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.4352926483614"
-              Start="0,0"
-              End="0,26.9352926483614">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.9352926483614" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.66295882418072,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="181.6,41.6"
-          Id="Package\FactOrder\Get DimDate Order Id"
-          TopLeft="535.000009110996,141.235295200843" />
         <EdgeLayout
           Id="Package\FactOrder.Paths[Output 0]"
           TopLeft="624.714288919556,117.541173328248">
@@ -10104,32 +10117,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="192.8,41.6"
-          Id="Package\FactOrder\Get DimDate Shipped Id"
-          TopLeft="525.000008940697,218.658826124792" />
         <EdgeLayout
-          Id="Package\FactOrder.Paths[Lookup Match Output4]"
-          TopLeft="623.600009025846,182.835295200843">
+          Id="Package\FactOrder.Paths[OLE DB Source Output]"
+          TopLeft="623.107140095867,50.8529407045833">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.8235309239491"
+              EndConnector="0,25.0882326236643"
               Start="0,0"
-              End="0,28.3235309239491">
+              End="0,17.5882326236643">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.3235309239491" />
+                    End="0,17.5882326236643" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,8.35707796197455,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10156,12 +10163,235 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactOrder.Paths[Lookup Match Output4]"
+          TopLeft="623.600009025846,182.835295200843">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.8235309239491"
+              Start="0,0"
+              End="0,28.3235309239491">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.3235309239491" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,8.35707796197455,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactOrder.Paths[Lookup Match Output3]"
+          TopLeft="624.000009196145,565.894123878117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.4352926483614"
+              Start="0,0"
+              End="0,26.9352926483614">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.9352926483614" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,7.66295882418072,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FactOrder.Paths[Lookup Match Output2]"
+          TopLeft="624.942866375495,485.76471190964">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.5294119684755"
+              Start="0,0"
+              End="0,31.0294119684755">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.0294119684755" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,9.71001848423776,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\FactOrder\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactOrder\Get DimDate Order Id">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactOrder\Get DimEmployee Id">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimEmployee]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactOrder\Get DimShipper Id">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimShipper]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\FactOrder\OLE DB Source">
     <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactOrder\Get DimCustomer Id">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCustomer]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactOrder\Get DimDate Shipped Id">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\FactOrder\Get DimProduct Id">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimProduct]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -10215,9 +10445,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10239,9 +10467,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10471,9 +10697,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10495,9 +10719,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10519,9 +10741,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -10567,9 +10787,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10581,7 +10799,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10711,9 +10929,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11059,17 +11275,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Sequence Container\DimShipper\Insert Destination"
-          TopLeft="5.5000000000001,310.3" />
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Sequence Container\DimShipper\Conditional Split"
-          TopLeft="234.285718275576,97.1176484208619" />
-        <NodeLayout
           Size="208,41.6"
           Id="Package\Sequence Container\DimShipper\Slowly Changing Dimension"
           TopLeft="206.7,208.7" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Sequence Container\DimShipper\Flat File Destination"
+          TopLeft="552.857152272244,101.705883779328" />
         <NodeLayout
           Size="164.8,41.6"
           Id="Package\Sequence Container\DimShipper\OLE DB Command"
@@ -11078,6 +11290,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Size="149.6,41.6"
           Id="Package\Sequence Container\DimShipper\OLE DB Source"
           TopLeft="235.9,5.49999999999984" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Sequence Container\DimShipper\Insert Destination"
+          TopLeft="5.5000000000001,310.3" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Sequence Container\DimShipper\Conditional Split"
+          TopLeft="234.285718275576,97.1176484208619" />
+        <EdgeLayout
+          Id="Package\Sequence Container\DimShipper.Paths[OLE DB Source Output]"
+          TopLeft="311.092859137788,47.0999999999998">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.0176484208621"
+              Start="0,0"
+              End="0,42.5176484208621">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5176484208621" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\DimShipper.Paths[New Output]"
           TopLeft="277.366666666667,250.3">
@@ -11111,6 +11353,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-122.424720052084,29.2748091603053,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\DimShipper.Paths[Conditional Split Default Output]"
+          TopLeft="388.685718275576,120.211766100095">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="164.171433996668,0"
+              Start="0,0"
+              End="156.671433996668,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="156.671433996668,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="7.72181074833412,5,141.2278125,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -11174,44 +11440,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\DimShipper.Paths[OLE DB Source Output]"
-          TopLeft="311.092859137788,47.0999999999998">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50.0176484208621"
-              Start="0,0"
-              End="0,42.5176484208621">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5176484208621" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\DimShipper\Insert Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\DimShipper\Slowly Changing Dimension">
     <Properties>
@@ -11269,99 +11500,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\FactOrder\Get DimCustomer Id">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimCustomer]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\FactOrder\Get DimEmployee Id">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimEmployee]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\FactOrder\Get DimShipper Id">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimShipper]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\FactOrder\Get DimProduct Id">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimProduct]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\FactOrder\OLE DB Destination">
+    design-time-name="Package\Sequence Container\DimShipper\Insert Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11370,52 +11509,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\FactOrder\Get DimDate Order Id">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\FactOrder\Get DimDate Shipped Id">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

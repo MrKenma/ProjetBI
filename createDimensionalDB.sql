@@ -9,7 +9,7 @@ GO
 USE [BlablaCoSalesDB]
 GO
 
-DROP TABLE IF EXISTS [dbo].[FactOrderDetails];
+DROP TABLE IF EXISTS [dbo].[FactSales];
 DROP TABLE IF EXISTS [dbo].[DimDate];
 DROP TABLE IF EXISTS [dbo].[DimProduct];
 DROP TABLE IF EXISTS [dbo].[DimCustomer];
@@ -53,8 +53,8 @@ GO
 CREATE TABLE [DimEmployee] (
 	[EmployeeID] INT PRIMARY KEY IDENTITY (1, 1),
 	[EmployeeAltID] INT NOT NULL,
-	[LastName] NVARCHAR(20) NOT NULL,
-	[FirstName] NVARCHAR(10) NOT NULL
+	[FirstName] NVARCHAR(10) NOT NULL,
+	[LastName] NVARCHAR(20) NOT NULL
 )
 GO
 
@@ -65,7 +65,7 @@ CREATE TABLE [DimShipper] (
 )
 GO
 
-CREATE TABLE [dbo].[FactOrderDetails] (
+CREATE TABLE [dbo].[FactSales] (
 	[OrderIDKEY] INT NOT NULL,
 	[ProductIDKEY] INT NOT NULL,
 	[DBName] NCHAR(15) NOT NULL,
